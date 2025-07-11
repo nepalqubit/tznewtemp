@@ -1,0 +1,47 @@
+# WordPress debug logs
+debug.log
+wp-debug.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if any)
+node_modules/
+
+# Compiled assets
+*.min.css
+*.min.js
+
+# Cache files
+*.cache
+
+# Temporary files
+*.tmp
+*.temp
+
+# ACF JSON backup files (optional - you may want to include these)
+# acf-json/
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Backup files
+*.bak
+*.backup
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
