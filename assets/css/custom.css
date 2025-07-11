@@ -845,3 +845,446 @@
   background: var(--primary-color);
   color: white;
 }
+
+/* ========================================
+   SHORTCODE STYLES
+   ======================================== */
+
+/* Base Grid Layouts */
+.tznew-tours-grid,
+.tznew-trekking-grid,
+.tznew-blog-grid,
+.tznew-tour-grid,
+.tznew-featured-tours,
+.tznew-recent-blogs {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Column Layouts */
+.columns-1 { grid-template-columns: 1fr; }
+.columns-2 { grid-template-columns: repeat(2, 1fr); }
+.columns-3 { grid-template-columns: repeat(3, 1fr); }
+.columns-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .columns-4 { grid-template-columns: repeat(3, 1fr); }
+  .columns-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .columns-4,
+  .columns-3,
+  .columns-2 { grid-template-columns: 1fr; }
+}
+
+/* Tour Item Styles */
+.tour-item,
+.trekking-item,
+.blog-item,
+.tour-grid-item,
+.featured-tour-item,
+.recent-blog-item {
+  background: var(--bg-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative;
+}
+
+.tour-item:hover,
+.trekking-item:hover,
+.blog-item:hover,
+.tour-grid-item:hover,
+.featured-tour-item:hover,
+.recent-blog-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Thumbnail Styles */
+.tour-thumbnail,
+.trekking-thumbnail,
+.blog-thumbnail,
+.tour-image {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+}
+
+.tour-thumbnail img,
+.trekking-thumbnail img,
+.blog-thumbnail img,
+.tour-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.tour-thumbnail:hover img,
+.trekking-thumbnail:hover img,
+.blog-thumbnail:hover img,
+.tour-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Content Styles */
+.tour-content,
+.trekking-content,
+.blog-content,
+.tour-info {
+  padding: 1.5rem;
+}
+
+.tour-title,
+.trekking-title,
+.blog-title,
+.tour-name {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.tour-title a,
+.trekking-title a,
+.blog-title a,
+.tour-name a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.tour-title a:hover,
+.trekking-title a:hover,
+.blog-title a:hover,
+.tour-name a:hover {
+  color: var(--primary-color);
+}
+
+/* Meta Information */
+.tour-duration,
+.trekking-duration,
+.blog-meta,
+.tour-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.tour-details {
+  justify-content: space-between;
+}
+
+.duration-label,
+.price-label {
+  font-weight: 500;
+}
+
+.duration-value,
+.price-value {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Price Styles */
+.tour-price,
+.trekking-price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.price-value {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+}
+
+/* Excerpt Styles */
+.tour-excerpt,
+.trekking-excerpt,
+.blog-excerpt {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Action Buttons */
+.tour-actions,
+.trekking-actions,
+.blog-actions {
+  margin-top: auto;
+}
+
+/* Featured Badge */
+.featured-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--accent-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* FAQ Styles */
+.tznew-faq {
+  margin: 2rem 0;
+}
+
+.faq-item {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  background: var(--bg-light);
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.faq-question:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.faq-question h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.faq-toggle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.faq-answer {
+  padding: 1.5rem;
+  background: var(--bg-white);
+  border-top: 1px solid var(--border-color);
+}
+
+.faq-answer p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+/* Form Wrapper Styles */
+.tznew-booking-form-wrapper,
+.tznew-inquiry-form-wrapper,
+.tznew-customization-form-wrapper {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  margin: 2rem 0;
+}
+
+.booking-form-title,
+.inquiry-form-title,
+.customization-form-title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+/* Company Info Styles */
+.tznew-company-info {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.company-phone,
+.company-email,
+.company-address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.company-phone .label,
+.company-email .label,
+.company-address .label {
+  font-weight: 600;
+  color: var(--text-dark);
+  min-width: 80px;
+}
+
+.company-phone a,
+.company-email a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.company-phone a:hover,
+.company-email a:hover {
+  color: var(--primary-dark);
+}
+
+.company-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 0.875rem;
+}
+
+.social-link:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Tour Grid Alternative Layout */
+.layout-list .tour-grid-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.layout-list .tour-image {
+  flex: 0 0 200px;
+  aspect-ratio: 4/3;
+}
+
+.layout-list .tour-info {
+  flex: 1;
+}
+
+.layout-carousel {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.layout-carousel .tour-grid-item {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+}
+
+/* No Results Messages */
+.no-tours-found,
+.no-trekking-found,
+.no-blog-found,
+.no-faq-found,
+.no-featured-tours,
+.no-recent-blogs,
+.no-tours-grid {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Testimonials Placeholder */
+.tznew-testimonials-placeholder {
+  background: var(--bg-light);
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.tznew-testimonials-placeholder p {
+  color: var(--text-light);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Blog Meta Enhancements */
+.blog-date,
+.blog-author,
+.reading-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-right: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.blog-date::before {
+  content: '📅';
+}
+
+.blog-author::before {
+  content: '👤';
+}
+
+.reading-time::before {
+  content: '⏱️';
+}
+
+/* Responsive Adjustments for Shortcodes */
+@media (max-width: 640px) {
+  .tour-content,
+  .trekking-content,
+  .blog-content,
+  .tour-info {
+    padding: 1rem;
+  }
+  
+  .tznew-booking-form-wrapper,
+  .tznew-inquiry-form-wrapper,
+  .tznew-customization-form-wrapper,
+  .tznew-company-info {
+    padding: 1.5rem;
+  }
+  
+  .layout-list .tour-grid-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .layout-list .tour-image {
+    flex: none;
+    width: 100%;
+  }
+  
+  .company-social {
+    justify-content: center;
+  }
+}

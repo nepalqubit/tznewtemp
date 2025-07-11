@@ -225,6 +225,7 @@ require_once TZNEW_INC_DIR . '/post-types.php';
 require_once TZNEW_INC_DIR . '/theme-functions.php';
 require_once TZNEW_INC_DIR . '/rest-api.php';
 require_once TZNEW_INC_DIR . '/customizer.php';
+require_once TZNEW_INC_DIR . '/shortcodes.php';
 
 /**
  * Load ACF integration after WordPress is fully initialized
